@@ -10,9 +10,9 @@ import { ViewChild } from '@angular/core';
   styleUrls: ['./location.component.css']
 })
 export class LocationComponent implements OnInit {
-  @ViewChild('gmap') gmapElement: any;
-  map: google.maps.Map;
 
+  latitude = -34.397;
+  longitude = 150.644;
   constructor(
     private _httpService: HttpService,
     private _route: ActivatedRoute,
@@ -20,12 +20,6 @@ export class LocationComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    var mapProp = {
-      center: new google.maps.LatLng(18.5793, 73.8143),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
     console.log("Location up")
     }
     

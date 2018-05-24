@@ -50,7 +50,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var routes = [
     { path: '', redirectTo: 'landing', pathMatch: 'full' },
     { path: 'landing', component: _landing_landing_component__WEBPACK_IMPORTED_MODULE_0__["LandingComponent"] },
-    { path: 'location', component: _location_location_component__WEBPACK_IMPORTED_MODULE_3__["LocationComponent"] },
+    { path: 'locations', component: _location_location_component__WEBPACK_IMPORTED_MODULE_3__["LocationComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -138,10 +138,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
-/* harmony import */ var _location_location_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./location/location.component */ "./src/app/location/location.component.ts");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
+/* harmony import */ var _location_location_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./location/location.component */ "./src/app/location/location.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -154,22 +155,26 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _landing_landing_component__WEBPACK_IMPORTED_MODULE_4__["LandingComponent"],
-                _location_location_component__WEBPACK_IMPORTED_MODULE_5__["LocationComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                _landing_landing_component__WEBPACK_IMPORTED_MODULE_5__["LandingComponent"],
+                _location_location_component__WEBPACK_IMPORTED_MODULE_6__["LocationComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_2__["AgmCoreModule"].forRoot({
+                    apiKey: 'AIzaSyA9nIuzBQg_mY6Xi8Ia_3_KtbwXftZInyQ'
+                })
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -234,7 +239,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  Hello fuckin' Angular\n</p>\n<button [routerLink]=\"['/location']\">Go to Locations</button>\n"
+module.exports = "<p>\n  Hello fuckin' Angular\n</p>\n<button [routerLink]=\"['/locations']\">Go to Locations</button>\n"
 
 /***/ }),
 
@@ -270,6 +275,7 @@ var LandingComponent = /** @class */ (function () {
         this._router = _router;
     }
     LandingComponent.prototype.ngOnInit = function () {
+        console.log("Testing");
     };
     LandingComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -306,7 +312,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  location works!\n</p>\n// These code snippets use an open-source library. http://unirest.io/java\n<script>\n  console.log(\"Test\")\n  unirest.get(\"https://trailapi-trailapi.p.mashape.com/?q[activities_activity_type_name_eq]=hiking&q[city_cont]=Seattle&radius=25\")\n    .header(\"X-Mashape-Key\", \"gq9dN7jryqmsh5hQ0tCX3iShEWGvp1zMtNxjsnqOoLMSWCegKO\")\n    .header(\"Accept\", \"text/plain\")\n    .end(function (result) {\n      console.log(result.body);\n    });\n</script>"
+module.exports = "<!DOCTYPE html>\n<html>\n\n<head>\n  <title>Simple Map</title>\n  <meta name=\"viewport\" content=\"initial-scale=1.0\">\n  <meta charset=\"utf-8\">\n  <style>\n    /* Always set the map height explicitly to define the size of the div\n                   * element that contains the map. */\n\n    #map {\n      height: 100%;\n    }\n\n    /* Optional: Makes the sample page fill the window. */\n\n    html,\n    body {\n      height: 100%;\n      margin: 0;\n      padding: 0;\n    }\n  </style>\n</head>\n\n<body>\n  <div id=\"gmap\"></div>\n  <script>\n    var map;\n    function initMap() {\n      map = new google.maps.Map(document.getElementById('map'), {\n        center: { lat: -34.397, lng: 150.644 },\n        zoom: 8\n      });\n    }\n  </script>\n  <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyA9nIuzBQg_mY6Xi8Ia_3_KtbwXftZInyQ&callback=initMap\" async\n    defer></script>\n</body>\n\n</html>"
 
 /***/ }),
 
@@ -321,6 +327,8 @@ module.exports = "<p>\n  location works!\n</p>\n// These code snippets use an op
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationComponent", function() { return LocationComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -331,22 +339,42 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var LocationComponent = /** @class */ (function () {
-    function LocationComponent() {
+    function LocationComponent(_httpService, _route, _router) {
+        this._httpService = _httpService;
+        this._route = _route;
+        this._router = _router;
     }
     LocationComponent.prototype.ngOnInit = function () {
+        var mapProp = {
+            center: new google.maps.LatLng(18.5793, 73.8143),
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+        console.log("Location up");
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('gmap'),
+        __metadata("design:type", Object)
+    ], LocationComponent.prototype, "gmapElement", void 0);
     LocationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-location',
             template: __webpack_require__(/*! ./location.component.html */ "./src/app/location/location.component.html"),
             styles: [__webpack_require__(/*! ./location.component.css */ "./src/app/location/location.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], LocationComponent);
     return LocationComponent;
 }());
 
+;
 
 
 /***/ }),

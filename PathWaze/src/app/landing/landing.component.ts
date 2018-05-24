@@ -17,6 +17,7 @@ export class LandingComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log("Testing")
   }
 
 }

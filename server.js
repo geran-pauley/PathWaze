@@ -13,20 +13,19 @@ app.use(express.static(__dirname + '/PathWaze/dist/PathWaze'));
 mongoose.connect('mongodb://localhost/PathWaze');
 
 // var uniqueValidator = require("mongoose-unique-validator");
-const ProductSchema = new mongoose.Schema({
+const HikesSchema = new mongoose.Schema({
 
-    name: { type: String, required: [true, "Product must have a name"], minlength: [3, "Name must be longer than 3 characters"], unique: [true, "This product already exists"]},
-    qty: { type: Number, required: [true, "Product must have a Qty"], minlength: [0, "You must have at least 0 products"]},
-    price: { type: String, required: [true, "Product must have a Price"]},
+    name: { type: String, required: [true, "Hike must have a name"], minlength: [3, "Name must be longer than 3 characters"], unique: [true, "This product already exists"]},
+
 }, { timestamps: true });
 
-// ProductSchema.plugin(uniqueValidator);
+// HikeSchema.plugin(uniqueValidator);
 
-const Product = mongoose.model('Product', ProductSchema);
+const Hikes = mongoose.model('Hikes', HikesSchema);
 
-// 1. Retrieve all Products
+// 1. Retrieve all Hikes
 app.get('/landing', function (req, res) {
-    Product.find({}, function (err, data) {
+    Hikes.find({}, function (err, data) {
         if (err) {
             console.log("Returned error", err);
             res.json({ message: "Error", error: err });
@@ -36,6 +35,16 @@ app.get('/landing', function (req, res) {
     });
 });
 
+app.get('/location', function (req, res) {
+    Hikes.find({}, function (err, data) {
+        if (err) {
+            console.log("Returned error", err);
+            res.json({ message: "Error", error: err });
+        } else {
+            res.json(data);
+        }
+    });
+});
 // // Edit one product
 // app.get('/product/:id/edit', function (req, res) {
 //     Product.find({}, function (err, data) {

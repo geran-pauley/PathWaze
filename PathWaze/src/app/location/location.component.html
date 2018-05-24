@@ -1,0 +1,13 @@
+<p>
+  location works!
+</p>
+// These code snippets use an open-source library. http://unirest.io/java
+<script>
+  console.log("Test")
+  unirest.get("https://trailapi-trailapi.p.mashape.com/?q[activities_activity_type_name_eq]=hiking&q[city_cont]=Seattle&radius=25")
+    .header("X-Mashape-Key", "gq9dN7jryqmsh5hQ0tCX3iShEWGvp1zMtNxjsnqOoLMSWCegKO")
+    .header("Accept", "text/plain")
+    .end(function (result) {
+      console.log(result.body);
+    });
+</script>

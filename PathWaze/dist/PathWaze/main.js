@@ -75,7 +75,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n<router-outlet></router-outlet>\n\n\n"
+module.exports = "<h1>How's this, Queen Nishi?...mighty overlord of OUR project</h1>\n<router-outlet></router-outlet>\n\n\n"
 
 /***/ }),
 
@@ -239,7 +239,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  Hello fuckin' Angular\n</p>\n<button [routerLink]=\"['/locations']\">Go to Locations</button>\n"
+module.exports = "<p>\n  Hello fuckin' Angular\n</p>\n<form>\n<button [routerLink]=\"['/locations']\">Go to Locations</button>\n</form>"
 
 /***/ }),
 
@@ -301,7 +301,7 @@ var LandingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "agm-map{\r\n    height: 400px;\r\n}"
+module.exports = "agm-map{\r\n    height: 400px;\r\n    width: 400px;\r\n}"
 
 /***/ }),
 
@@ -312,7 +312,7 @@ module.exports = "agm-map{\r\n    height: 400px;\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<agm-map [latitude]=\"latitude\" [longitude]=\"longitude\"> \n  \n</agm-map>"
+module.exports = "<agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" (mapClick)=\"onChoseLocation($event)\"> \n  <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n</agm-map>\n\n"
 
 /***/ }),
 
@@ -346,11 +346,18 @@ var LocationComponent = /** @class */ (function () {
         this._httpService = _httpService;
         this._route = _route;
         this._router = _router;
-        this.latitude = -34.397;
-        this.longitude = 150.644;
+        this.latitude = 47.60997;
+        this.longitude = -122.196;
+        this.locationChosen = false;
     }
     LocationComponent.prototype.ngOnInit = function () {
         console.log("Location up");
+    };
+    LocationComponent.prototype.onChoseLocation = function (event) {
+        console.log(event);
+        this.latitude = event.coords.lat;
+        this.longitude = event.coords.lng;
+        this.locationChosen = true;
     };
     LocationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

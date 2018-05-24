@@ -11,8 +11,10 @@ import { ViewChild } from '@angular/core';
 })
 export class LocationComponent implements OnInit {
 
-  latitude = -34.397;
-  longitude = 150.644;
+  latitude = 47.60997;
+  longitude = -122.196;
+  locationChosen = false;
+
   constructor(
     private _httpService: HttpService,
     private _route: ActivatedRoute,
@@ -21,10 +23,17 @@ export class LocationComponent implements OnInit {
 
   ngOnInit() {
     console.log("Location up")
+
+
     }
     
   
-  
+  onChoseLocation(event){
+    console.log(event);
+    this.latitude = event.coords.lat;
+    this.longitude = event.coords.lng
+    this.locationChosen = true;
+  }
 };
 
 

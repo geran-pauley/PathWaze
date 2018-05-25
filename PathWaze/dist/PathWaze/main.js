@@ -78,7 +78,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"nav-extended light-blue darken-4\">\r\n        <div class=\"nav-wrapper\">\r\n          <a href=\"#!\" class=\"brand-logo\">PathWaze</a>\r\n          <ul class=\"right hide-on-med-and-down\">\r\n            <li><a>A link</a></li>\r\n            <li><a>A second link</a></li>\r\n            <li><a>A third link</a></li>\r\n          </ul>\r\n        </div>\r\n        <div class=\"nav-content\">\r\n          <span class=\"nav-title\"></span>\r\n          <a class=\"btn-floating btn-large halfway-fab waves-effect waves-light teal\">\r\n            <i class=\"material-icons\">+</i>\r\n          </a>\r\n        </div>\r\n      </nav>\r\n            \r\n<router-outlet></router-outlet>\r\n"
+module.exports = "\n<style>\nimg {\n  height: 100px;\n  width: auto;\n  margin-left: 30px;\n}\n\n</style>\n\n<div class=\"container blue-grey lighten-1\">\n<nav class=\"nav-extended white\">\n        <div class=\"nav-wrapper\">\n          <a href=\"#!\" class=\"brand-logo\"><img class=\"materialboxed\" src=\"assets/static/images/pathwazeLogo.png\"></a>\n          <ul class=\"right hide-on-med-and-down\">\n            <li><a class=\"btn large blue lighten-2\">Home</a></li>\n            <li><a [routerLink]=\"['/location']\" class=\"btn large blue lighten-2\">Location</a></li>\n            <li><a class=\"btn large blue lighten-2\">Meetups</a></li>\n            <li><a class=\"btn large blue lighten-2 disabled\">FAQ</a></li>\n          </ul>\n        </div>\n        <div class=\"nav-content\">\n          <span class=\"nav-title\"></span>\n          <a class=\"btn-floating btn-large halfway-fab waves-effect waves-light teal\">\n            <i class=\"medium material-icons\">camera_alt</i>\n          </a>\n        </div>\n      </nav>\n      \n            \n<router-outlet></router-outlet>\n\n\n\n<footer class=\"page-footer blue-grey lighten-1\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col l6 s12\">\n        <h5 class=\"white-text\"></h5>\n        <p class=\"grey-text blue-grey lighten-1\"></p>\n      </div>\n      <div class=\"col l4 offset-l2 s12\">\n        <h5 class=\"white-text\"></h5>\n        <ul>\n         \n        </ul>\n      </div>\n    </div>\n  </div>\n  <div class=\"footer-copyright\">\n    <div class=\"container\">\n    © 1999 Copyright Text\n    <a class=\"grey-text blue-grey lighten-1 right\" href=\"#!\"></a>\n    </div>\n  </div>\n</footer>\n</div>"
 
 /***/ }),
 
@@ -266,7 +266,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  Hello Angular\r\n</p>\r\n<form onSubmit=\"loadLocations\">\r\n  Enter your ZIP: <input type=\"text\">\r\n  <br>\r\n<button [routerLink]=\"['/location']\">Go to Locations</button>\r\n</form>\r\n"
+module.exports = "<p>\n  Hello Angular\n</p>\n<form onSubmit=\"loadLocations\">\n  Enter your ZIP: <input type=\"text\">\n  <br>\n<button [routerLink]=\"['/location']\">Go to Locations</button>\n</form>\n"
 
 /***/ }),
 
@@ -328,7 +328,7 @@ var LandingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "agm-map{\r\n    height: 400px;\r\n    width: 400px;\r\n}"
+module.exports = "agm-map{\n    height: 400px;\n    width: auto;\n}"
 
 /***/ }),
 
@@ -339,7 +339,7 @@ module.exports = "agm-map{\r\n    height: 400px;\r\n    width: 400px;\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col s12 m6\">\r\n      <div class=\"card blue-grey darken-1\">\r\n        <div class=\"card-content white-text\">\r\n    <agm-map class=\"center-align\" [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\r\n      <agm-marker class=\"center-align\" [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\r\n    </agm-map>\r\n          <span>Latitute: {{currentLat}}</span>\r\n          <br>\r\n          <span>Longitude: {{currentLong}}</span>\r\n        </div>\r\n      <div class=\"card-action\">\r\n        <a href=\"#\">Find MeetUps</a>\r\n        <a href=\"#\">Find Lodging</a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n"
+module.exports = "\n<style>\n\n  img {\n    height: auto;\n    width: 90px;\n  }\n</style>\n\n<div class=\"row\">\n    <div class=\"col s12 m6\">\n      <div class=\"card blue-grey darken-1\">\n        <div class=\"card-content white-text\">\n    <agm-map class=\"center-align\" [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\n      <agm-marker class=\"center-align\" [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n    </agm-map>\n          <blockquote><span>Latitute: {{currentLat}}</span></blockquote>\n          <blockquote><span>Longitude: {{currentLong}}</span></blockquote>\n\n          \n        </div>\n      <!-- <div class=\"card-action\">\n        <a href=\"#\">Find MeetUps</a>\n        <a href=\"#\">Find Lodging</a>\n        \n      </div> -->\n      \n    </div>\n\n    \n  </div>\n  <div class=\"row align-center\">\n    <div class=\"col s12 m6\">\n      <div class=\"card\">\n        <div class=\"card-image\">\n           <img class=\"materialboxed\" src=\"assets/static/images/hikepath.jpg\">\n          <span class=\"card-title\">Hikey Ridge</span>\n         \n          <a class=\"btn-floating halfway-fab waves-effect waves-light red\"><i class=\"material-icons\">add</i></a>\n        </div>\n        <div class=\"card-content\">\n          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>\n        </div>\n      </div>\n\n      <div id=\"socialMedia\" class=\"col s4\"><img class=\"materialboxed\" src=\"assets/static/images/facebook.png\"></div>\n      <div id=\"socialMedia\" class=\"col s4\"><img class=\"materialboxed\" src=\"assets/static/images/instagram.png\"></div>\n      <div id=\"socialMedia\" class=\"col s4\"><img class=\"materialboxed\" src=\"assets/static/images/twitter.png\"></div>\n    </div>\n  </div>\n            \n</div>\n\n"
 
 /***/ }),
 
@@ -571,7 +571,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Geran Pauley\Desktop\Dojo\MEAN\Project\PathWaze\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/josiahmcpeak/Desktop/coding_dojo/PathWaze/PathWaze/src/main.ts */"./src/main.ts");
 
 
 /***/ })

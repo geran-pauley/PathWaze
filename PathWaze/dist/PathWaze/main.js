@@ -75,11 +75,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<h1>Got Hikes?</h1>\n<router-outlet></router-outlet>\n"
-=======
-module.exports = "<h1 style=\"text-align:center\">PathWaze</h1>\n\n<router-outlet></router-outlet>\n\n\n"
->>>>>>> 059a6cb0ef49211fec334a44273bb427925ac74f
+module.exports = "<nav class=\"nav-extended light-blue darken-4\">\n        <div class=\"nav-wrapper\">\n          <a href=\"#!\" class=\"brand-logo\">PathWaze</a>\n          <ul class=\"right hide-on-med-and-down\">\n            <li><a>A link</a></li>\n            <li><a>A second link</a></li>\n            <li><a>A third link</a></li>\n          </ul>\n        </div>\n        <div class=\"nav-content\">\n          <span class=\"nav-title\"></span>\n          <a class=\"btn-floating btn-large halfway-fab waves-effect waves-light teal\">\n            <i class=\"material-icons\">+</i>\n          </a>\n        </div>\n      </nav>\n            \n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -243,7 +239,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  Hello fuckin' Angular\n</p>\n<form onSubmit=\"loadLocations\">\n  Enter your ZIP: <input type=\"text\">\n  <br>\n<button [routerLink]=\"['/locations']\">Go to Locations</button>\n</form>"
+module.exports = "<p>\n  Hello Angular\n</p>\n<form onSubmit=\"loadLocations\">\n  Enter your ZIP: <input type=\"text\">\n  <br>\n<button [routerLink]=\"['/locations']\">Go to Locations</button>\n</form>\n"
 
 /***/ }),
 
@@ -316,7 +312,7 @@ module.exports = "agm-map{\n    height: 400px;\n    width: 400px;\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n  <div style=\"text-align:center\">\n    <div class=\"text-white\">\n      <agm-map [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\n        <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n      </agm-map>\n      <span>Latitute: {{currentLat}}</span>\n      <br>\n      <span>Longitude: {{currentLong}}</span>\n    </div>\n    <br>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"text-center\">\n          <h3>\n            <div #gmap style=\"width:100%;height:300px\"></div>\n          </h3>\n        </div>\n      </div>\n    </div>\n  </div>\n"
+module.exports = "\n    <div class=\"row\">\n        <div class=\"col s12 m6\">\n          <div class=\"card blue-grey darken-1\">\n            <div class=\"card-content white-text\">\n              <span class=\"card-title\">Got Hikes?</span>\n      <agm-map class=\"center-align\" [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\n        <agm-marker class=\"center-align\" [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n      </agm-map>\n      <span>Latitute: {{currentLat}}</span>\n      <br>\n      <span>Longitude: {{currentLong}}</span>\n    </div>\n    <div class=\"card-action\">\n      <a href=\"#\">Find MeetUps</a>\n      <a href=\"#\">Find Lodging</a>\n    </div>\n  </div>\n</div>\n</div>\n    <br>\n    <div class=\"center-align\">\n            <div #gmap style=\"width:100%;height:300px\"></div>\n    </div>\n"
 
 /***/ }),
 

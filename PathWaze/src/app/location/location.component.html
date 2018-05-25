@@ -5,9 +5,9 @@
       <agm-map [latitude]="this.currentLat" [longitude]="this.currentLong" [zoom]="zoom" (mapClick)="onChoseLocation($event)">
         <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen"></agm-marker>
       </agm-map>
-      <span>Latitute: {{currentLat}}</span>
+      <span class="float-left">Latitute: {{currentLat}}</span>
       <br>
-      <span>Longitude: {{currentLong}}</span>
+      <span class="float-left">Longitude: {{currentLong}}</span>
     </div>
     <br>
     <div class="row">

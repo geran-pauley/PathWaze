@@ -239,11 +239,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<p>\n  Hello fuckin' Angular \n</p>\n<form>\n<button class=\"btn large teal darken-2\" [routerLink]=\"['/locations']\">Go to Locations<button/>\n</form>\n\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, beatae at voluptatum est deleniti corrupti quia assumenda sit nemo cum deserunt, nostrum iure dolorum fugit.</p>"
-=======
-module.exports = "<p>\n  Hello fuckin' Angular\n</p>\n<form onSubmit=\"loadLocations\">\n  Enter your ZIP: <input type=\"text\">\n  <br>\n<button [routerLink]=\"['/locations']\">Go to Locations</button>\n</form>"
->>>>>>> 059a6cb0ef49211fec334a44273bb427925ac74f
+module.exports = "<p>\n  Hello fuckin' Angular \n</p>\n<form onSubmit=\"loadLocations\">\n  Enter your ZIP: <input type=\"text\">\n  <br>\n<button [routerLink]=\"['/locations']\">Go to Locations</button>\n</form>\n\n\n"
 
 /***/ }),
 
@@ -316,7 +312,7 @@ module.exports = "agm-map{\n    height: 400px;\n    width: 400px;\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n  <div style=\"text-align:center\">\n    <div class=\"text-white\">\n      <agm-map [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\n        <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n      </agm-map>\n      <span>Latitute: {{currentLat}}</span>\n      <br>\n      <span>Longitude: {{currentLong}}</span>\n    </div>\n    <br>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"text-center\">\n          <h3>\n            <div #gmap style=\"width:100%;height:300px\"></div>\n          </h3>\n        </div>\n      </div>\n    </div>\n  </div>\n"
+module.exports = "\n<div class=\"container\">\n  <div style=\"text-align:center\">\n    <div class=\"text-white\">\n      <agm-map [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\n        <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n      </agm-map>\n      <span class=\"float-left\">Latitute: {{currentLat}}</span>\n      <br>\n      <span class=\"float-left\">Longitude: {{currentLong}}</span>\n    </div>\n    <br>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"text-center\">\n          <h3>\n            <div #gmap style=\"width:100%;height:300px\"></div>\n          </h3>\n        </div>\n      </div>\n    </div>\n  </div>\n"
 
 /***/ }),
 

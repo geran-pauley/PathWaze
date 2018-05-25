@@ -11,7 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "@types/googlemaps": "^3.30.8",
+
+    "angular2-materialize": "^15.1.10",
+
     "angular5-social-login": "^1.0.9",
+
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",

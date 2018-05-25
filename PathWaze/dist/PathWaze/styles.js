@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/brentdanis/Desktop/PathWaze/PathWaze/src/styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! C:\Users\Geran Pauley\Desktop\Dojo\MEAN\Project\PathWaze\src\styles.scss */"./src/styles.scss");
 
 
 /***/ })

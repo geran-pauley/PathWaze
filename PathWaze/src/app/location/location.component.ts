@@ -11,16 +11,9 @@ import { ViewChild } from '@angular/core';
 })
 export class LocationComponent implements OnInit {
   zoom = 12;
-  latitude: any;
-  longitude: any;
-  currentLat: any;
-  currentLong: any;
+
   
-  onChoseLocation(event){
-    this.latitude = event.coords.lat;
-    this.longitude = event.coords.lng;
-    
-  }
+
   constructor(
     private _httpService: HttpService,
     private _route: ActivatedRoute,
@@ -28,7 +21,15 @@ export class LocationComponent implements OnInit {
   ) { }
 
 
+  @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
+
+  isTracking = false;
+
+  currentLat: any;
+  currentLong: any;
+  latitude: -47
+  longitude: 124
   marker: google.maps.Marker;
 
   ngOnInit() {

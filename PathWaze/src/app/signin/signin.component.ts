@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AuthService } from '../../auth.service';
+import { SocialUser } from '../../entities/user';
+import { GoogleLoginProvider } from '../../providers/google-login-provider';
+import { FacebookLoginProvider } from '../../providers/facebook-login-provider';
+
+
 
 @Component({
   selector: 'app-signin',
@@ -9,10 +15,25 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class SigninComponent implements OnInit {
+  user: SocialUser;
+  
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    console.log("Sign In Page Loaded")
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+    });
   }
 
-  constructor() { }
+  signInWithGoogle(): void {
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  }
+
+  signInWithFB(): void {
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+  }
+
+  signOut(): void {
+    this.authService.signOut();
+  }
 }

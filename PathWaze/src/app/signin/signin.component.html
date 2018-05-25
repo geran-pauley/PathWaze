@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Sign in to PathWaze</title>
+  <title>Sign into PathWaze</title>
   <meta name="google-signin-client_id" content="50175574432-tpshh02i3gacjjuaf1u2sfugs4r83h51.apps.googleusercontent.com">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
-  <script src="./dist/hello.all.js">
-  hello.on('auth.login', function (auth) {
 
-      // Call user information, for the given network
-      hello(auth.network).api('me').then(function (r) {
-        // Inject it into the container
-        var label = document.getElementById('profile_' + auth.network);
-        if (!label) {
-          label = document.createElement('div');
-          label.id = 'profile_' + auth.network;
-          document.getElementById('profile').appendChild(label);
-        }
-        label.innerHTML = '<img src="' + r.thumbnail + '" /> Hey ' + r.name;
-      });
-    });</script>
 </head>
+
 <body style="text-align: center">
-  <h2>
-    Sign in
-  </h2>
-<button onclick="hello('google').login()">Sign in with Google</button>
+  <div>
+    <div class="signin" *ngIf="!user">
+      <div>
+        <h4>Not signed in</h4>
+        <p>Sign in with</p>
+      </div>
+      <div>
+        <button class="btn large green" (click)="signInWithGoogle()">Google</button>
+        <button class="btn large blue" (click)="signInWithFB()">Facebook </button>
+      </div>
+    </div>
+    <div *ngIf="user">
+      <div></div>
+      <img src="{{ user.photoUrl }}">
+      <div>
+        <h4>{{ user.name }}</h4>
+        <p>{{ user.email }}</p>
+      </div>
+      <div>
+        <button class="btn large red" (click)="signOut()">Sign out</button>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
-
-
-

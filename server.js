@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
+const passport = require('passport');
+const social = require('./app/passport/passport')(app, passport);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -13,19 +15,19 @@ app.use(express.static(__dirname + '/PathWaze/dist/PathWaze'));
 mongoose.connect('mongodb://localhost/PathWaze');
 
 // var uniqueValidator = require("mongoose-unique-validator");
-const HikesSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
 
     name: { type: String, required: [true, "Hike must have a name"], minlength: [3, "Name must be longer than 3 characters"], unique: [true, "This product already exists"]},
 
 }, { timestamps: true });
 
-// HikeSchema.plugin(uniqueValidator);
+// Userchema.plugin(uniqueValidator);
 
-const Hikes = mongoose.model('Hikes', HikesSchema);
+const User = mongoose.model('User', UserSchema);
 
-// 1. Retrieve all Hikes
+// 1. Retrieve all User
 app.get('/landings', function (req, res) {
-    Hikes.find({}, function (err, data) {
+    User.find({}, function (err, data) {
         if (err) {
             console.log("Returned error", err);
             res.json({ message: "Error", error: err });
@@ -36,7 +38,7 @@ app.get('/landings', function (req, res) {
 });
 
 app.get('/locations', function (req, res) {
-    Hikes.find({}, function (err, data) {
+    User.find({}, function (err, data) {
         if (err) {
             console.log("Returned error", err);
             res.json({ message: "Error", error: err });
@@ -47,7 +49,7 @@ app.get('/locations', function (req, res) {
 });
 
 app.get('/signins', function (req, res) {
-    Hikes.find({}, function (err, data) {
+    User.find({}, function (err, data) {
         if (err) {
             console.log("Returned error", err);
             res.json({ message: "Error", error: err });

@@ -3,8 +3,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
-const passport = require('passport');
-const social = require('./app/passport/passport')(app, passport);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

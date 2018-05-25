@@ -1,3 +1,4 @@
+import { SigninComponent } from './signin/signin.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
@@ -12,6 +13,7 @@ import { LocationComponent } from './location/location.component';
     AppComponent,
     LandingComponent,
     LocationComponent,
+    SigninComponent,
 
   ],
   imports: [

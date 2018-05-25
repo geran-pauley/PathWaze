@@ -78,7 +78,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<style>\nimg {\n  height: 100px;\n  width: auto;\n  margin-left: 30px;\n}\n\n</style>\n\n<div class=\"container blue-grey lighten-1\">\n<nav class=\"nav-extended white\">\n        <div class=\"nav-wrapper\">\n          <a href=\"#!\" class=\"brand-logo\"><img class=\"materialboxed\" src=\"assets/static/images/pathwazeLogo.png\"></a>\n          <ul class=\"right hide-on-med-and-down\">\n            <li><a class=\"btn large blue lighten-2\">Home</a></li>\n            <li><a [routerLink]=\"['/location']\" class=\"btn large blue lighten-2\">Location</a></li>\n            <li><a class=\"btn large blue lighten-2\">Meetups</a></li>\n            <li><a class=\"btn large blue lighten-2 disabled\">FAQ</a></li>\n          </ul>\n        </div>\n        <div class=\"nav-content\">\n          <span class=\"nav-title\"></span>\n          <a class=\"btn-floating btn-large halfway-fab waves-effect waves-light teal\">\n            <i class=\"medium material-icons\">camera_alt</i>\n          </a>\n        </div>\n      </nav>\n      \n            \n<router-outlet></router-outlet>\n\n\n\n<footer class=\"page-footer blue-grey lighten-1\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col l6 s12\">\n        <h5 class=\"white-text\"></h5>\n        <p class=\"grey-text blue-grey lighten-1\"></p>\n      </div>\n      <div class=\"col l4 offset-l2 s12\">\n        <h5 class=\"white-text\"></h5>\n        <ul>\n         \n        </ul>\n      </div>\n    </div>\n  </div>\n  <div class=\"footer-copyright\">\n    <div class=\"container\">\n    © 1999 Copyright Text\n    <a class=\"grey-text blue-grey lighten-1 right\" href=\"#!\"></a>\n    </div>\n  </div>\n</footer>\n</div>"
+module.exports = "\r\n<style>\r\nimg {\r\n  height: 100px;\r\n  width: auto;\r\n  margin-left: 30px;\r\n}\r\n\r\n</style>\r\n\r\n<div class=\"container blue-grey lighten-1\">\r\n<nav class=\"nav-extended white\">\r\n        <div class=\"nav-wrapper\">\r\n          <a href=\"#!\" class=\"brand-logo\"><img class=\"materialboxed\" src=\"assets/static/images/pathwazeLogo.png\"></a>\r\n          <ul class=\"right hide-on-med-and-down\">\r\n            <li><a class=\"btn large blue lighten-2\">Home</a></li>\r\n            <li><a [routerLink]=\"['/location']\" class=\"btn large blue lighten-2\">Location</a></li>\r\n            <li><a class=\"btn large blue lighten-2\">Meetups</a></li>\r\n            <li><a class=\"btn large blue lighten-2 disabled\">FAQ</a></li>\r\n          </ul>\r\n        </div>\r\n        <div class=\"nav-content\">\r\n          <span class=\"nav-title\"></span>\r\n          <a class=\"btn-floating btn-large halfway-fab waves-effect waves-light teal\">\r\n            <i class=\"medium material-icons\">camera_alt</i>\r\n          </a>\r\n        </div>\r\n      </nav>\r\n      \r\n            \r\n<router-outlet></router-outlet>\r\n\r\n\r\n\r\n<footer class=\"page-footer blue-grey lighten-1\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col l6 s12\">\r\n        <h5 class=\"white-text\"></h5>\r\n        <p class=\"grey-text blue-grey lighten-1\"></p>\r\n      </div>\r\n      <div class=\"col l4 offset-l2 s12\">\r\n        <h5 class=\"white-text\"></h5>\r\n        <ul>\r\n         \r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"footer-copyright\">\r\n    <div class=\"container\">\r\n    © 1999 Copyright Text\r\n    <a class=\"grey-text blue-grey lighten-1 right\" href=\"#!\"></a>\r\n    </div>\r\n  </div>\r\n</footer>\r\n</div>"
 
 /***/ }),
 
@@ -139,13 +139,14 @@ var AppComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
-/* harmony import */ var _location_location_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./location/location.component */ "./src/app/location/location.component.ts");
+/* harmony import */ var _signin_signin_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./signin/signin.component */ "./src/app/signin/signin.component.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
+/* harmony import */ var _location_location_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./location/location.component */ "./src/app/location/location.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -159,25 +160,27 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _landing_landing_component__WEBPACK_IMPORTED_MODULE_5__["LandingComponent"],
-                _location_location_component__WEBPACK_IMPORTED_MODULE_6__["LocationComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _landing_landing_component__WEBPACK_IMPORTED_MODULE_6__["LandingComponent"],
+                _location_location_component__WEBPACK_IMPORTED_MODULE_7__["LocationComponent"],
+                _signin_signin_component__WEBPACK_IMPORTED_MODULE_0__["SigninComponent"],
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _agm_core__WEBPACK_IMPORTED_MODULE_2__["AgmCoreModule"].forRoot({
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_3__["AgmCoreModule"].forRoot({
                     apiKey: 'AIzaSyA9nIuzBQg_mY6Xi8Ia_3_KtbwXftZInyQ'
                 }),
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -242,7 +245,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  Hello Angular\n</p>\n<form onSubmit=\"loadLocations\">\n  Enter your ZIP: <input type=\"text\">\n  <br>\n<button [routerLink]=\"['/location']\">Go to Locations</button>\n</form>\n"
+module.exports = "<p>\r\n  Hello Angular\r\n</p>\r\n<form onSubmit=\"loadLocations\">\r\n  Enter your ZIP: <input type=\"text\">\r\n  <br>\r\n<button [routerLink]=\"['/location']\">Go to Locations</button>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -304,7 +307,7 @@ var LandingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "agm-map{\n    height: 400px;\n    width: auto;\n}"
+module.exports = "agm-map{\r\n    height: 400px;\r\n    width: auto;\r\n}"
 
 /***/ }),
 
@@ -315,7 +318,7 @@ module.exports = "agm-map{\n    height: 400px;\n    width: auto;\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<style>\n\n  img {\n    height: auto;\n    width: 90px;\n  }\n</style>\n\n<div class=\"row\">\n    <div class=\"col s12 m6\">\n      <div class=\"card blue-grey darken-1\">\n        <div class=\"card-content white-text\">\n    <agm-map class=\"center-align\" [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\n      <agm-marker class=\"center-align\" [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n    </agm-map>\n          <blockquote><span>Latitute: {{currentLat}}</span></blockquote>\n          <blockquote><span>Longitude: {{currentLong}}</span></blockquote>\n\n          \n        </div>\n      <!-- <div class=\"card-action\">\n        <a href=\"#\">Find MeetUps</a>\n        <a href=\"#\">Find Lodging</a>\n        \n      </div> -->\n      \n    </div>\n\n    \n  </div>\n  <div class=\"row align-center\">\n    <div class=\"col s12 m6\">\n      <div class=\"card\">\n        <div class=\"card-image\">\n           <img class=\"materialboxed\" src=\"assets/static/images/hikepath.jpg\">\n          <span class=\"card-title\">Hikey Ridge</span>\n         \n          <a class=\"btn-floating halfway-fab waves-effect waves-light red\"><i class=\"material-icons\">add</i></a>\n        </div>\n        <div class=\"card-content\">\n          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>\n        </div>\n      </div>\n\n      <div id=\"socialMedia\" class=\"col s4\"><img class=\"materialboxed\" src=\"assets/static/images/facebook.png\"></div>\n      <div id=\"socialMedia\" class=\"col s4\"><img class=\"materialboxed\" src=\"assets/static/images/instagram.png\"></div>\n      <div id=\"socialMedia\" class=\"col s4\"><img class=\"materialboxed\" src=\"assets/static/images/twitter.png\"></div>\n    </div>\n  </div>\n            \n</div>\n\n"
+module.exports = "\r\n<style>\r\n\r\n  img {\r\n    height: auto;\r\n    width: 90px;\r\n  }\r\n</style>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col s12 m6\">\r\n      <div class=\"card blue-grey darken-1\">\r\n        <div class=\"card-content white-text\">\r\n    <agm-map class=\"center-align\" [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\r\n      <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\"></agm-marker>\r\n    </agm-map>\r\n          <blockquote><span>Latitute: {{currentLat}}</span></blockquote>\r\n          <blockquote><span>Longitude: {{currentLong}}</span></blockquote>\r\n\r\n          \r\n        </div>\r\n      <!-- <div class=\"card-action\">\r\n        <a href=\"#\">Find MeetUps</a>\r\n        <a href=\"#\">Find Lodging</a>\r\n        \r\n      </div> -->\r\n      \r\n    </div>\r\n\r\n    \r\n  </div>\r\n  <div class=\"row align-center\">\r\n    <div class=\"col s12 m6\">\r\n      <div class=\"card\">\r\n        <div class=\"card-image\">\r\n           <img class=\"materialboxed\" src=\"assets/static/images/hikepath.jpg\">\r\n          <span class=\"card-title\">Hikey Ridge</span>\r\n         \r\n          <a class=\"btn-floating halfway-fab waves-effect waves-light red\"><i class=\"material-icons\">add</i></a>\r\n        </div>\r\n        <div class=\"card-content\">\r\n          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>\r\n        </div>\r\n      </div>\r\n\r\n      <div id=\"socialMedia\" class=\"col s4\"><img class=\"materialboxed\" src=\"assets/static/images/facebook.png\"></div>\r\n      <div id=\"socialMedia\" class=\"col s4\"><img class=\"materialboxed\" src=\"assets/static/images/instagram.png\"></div>\r\n      <div id=\"socialMedia\" class=\"col s4\"><img class=\"materialboxed\" src=\"assets/static/images/twitter.png\"></div>\r\n    </div>\r\n  </div>\r\n            \r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -344,15 +347,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var LocationComponent = /** @class */ (function () {
     function LocationComponent(_httpService, _route, _router) {
         this._httpService = _httpService;
         this._route = _route;
         this._router = _router;
         this.zoom = 12;
-        this.isTracking = false;
     }
+    LocationComponent.prototype.onChoseLocation = function (event) {
+        this.latitude = event.coords.lat;
+        this.longitude = event.coords.lng;
+    };
     LocationComponent.prototype.ngOnInit = function () {
         this.findMe();
     };
@@ -383,10 +388,6 @@ var LocationComponent = /** @class */ (function () {
             this.marker.setPosition(location);
         }
     };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('gmap'),
-        __metadata("design:type", Object)
-    ], LocationComponent.prototype, "gmapElement", void 0);
     LocationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-location',
@@ -530,7 +531,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/josiahmcpeak/Desktop/coding_dojo/PathWaze/PathWaze/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Geran Pauley\Desktop\Dojo\MEAN\Project\PathWaze\src\main.ts */"./src/main.ts");
 
 
 /***/ })

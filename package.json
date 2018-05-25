@@ -11,12 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "@types/googlemaps": "^3.30.8",
+    "angular2-materialize": "^15.1.10",
+    "angular5-social-login": "^1.0.9",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "google-geocoder": "^0.2.1",
     "mongoose": "^5.1.2",
     "path": "^0.12.7",
+    "rxjs-compat": "^6.0.0-tactical-rc.1",
     "zipcodes": "^6.0.0"
   }
 }

@@ -17,7 +17,8 @@ import { LocationComponent } from './location/location.component';
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA9nIuzBQg_mY6Xi8Ia_3_KtbwXftZInyQ'
-    })
+    }),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

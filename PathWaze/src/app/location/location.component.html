@@ -1,4 +1,22 @@
-<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)"> 
-  <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen"></agm-marker>
-</agm-map>
 
+<div class="container">
+  <div style="text-align:center">
+    <div class="text-white">
+      <agm-map [latitude]="this.currentLat" [longitude]="this.currentLong" [zoom]="zoom" (mapClick)="onChoseLocation($event)">
+        <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen"></agm-marker>
+      </agm-map>
+      <span>Latitute: {{currentLat}}</span>
+      <br>
+      <span>Longitude: {{currentLong}}</span>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          <h3>
+            <div #gmap style="width:100%;height:300px"></div>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>

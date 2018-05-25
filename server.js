@@ -24,7 +24,7 @@ const HikesSchema = new mongoose.Schema({
 const Hikes = mongoose.model('Hikes', HikesSchema);
 
 // 1. Retrieve all Hikes
-app.get('/landing', function (req, res) {
+app.get('/landings', function (req, res) {
     Hikes.find({}, function (err, data) {
         if (err) {
             console.log("Returned error", err);

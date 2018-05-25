@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LandingComponent implements OnInit {
 
+
   constructor(
     private _httpService: HttpService,
     private _route: ActivatedRoute,
@@ -19,5 +20,5 @@ export class LandingComponent implements OnInit {
   ngOnInit() {
     console.log("Testing")
   }
-
+  
 }

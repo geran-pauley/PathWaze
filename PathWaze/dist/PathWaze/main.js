@@ -75,7 +75,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>How's this, Queen Nishi?...mighty overlord of OUR project</h1>\n<router-outlet></router-outlet>\n\n\n"
+module.exports = "<h1 style=\"text-align:center\">PathWaze</h1>\n\n<router-outlet></router-outlet>\n\n\n"
 
 /***/ }),
 
@@ -171,7 +171,7 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _agm_core__WEBPACK_IMPORTED_MODULE_2__["AgmCoreModule"].forRoot({
                     apiKey: 'AIzaSyA9nIuzBQg_mY6Xi8Ia_3_KtbwXftZInyQ'
-                })
+                }),
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -239,7 +239,11 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 module.exports = "<p>\n  Hello fuckin' Angular \n</p>\n<form>\n<button class=\"btn large teal darken-2\" [routerLink]=\"['/locations']\">Go to Locations<button/>\n</form>\n\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, beatae at voluptatum est deleniti corrupti quia assumenda sit nemo cum deserunt, nostrum iure dolorum fugit.</p>"
+=======
+module.exports = "<p>\n  Hello fuckin' Angular\n</p>\n<form onSubmit=\"loadLocations\">\n  Enter your ZIP: <input type=\"text\">\n  <br>\n<button [routerLink]=\"['/locations']\">Go to Locations</button>\n</form>"
+>>>>>>> 059a6cb0ef49211fec334a44273bb427925ac74f
 
 /***/ }),
 
@@ -312,7 +316,7 @@ module.exports = "agm-map{\n    height: 400px;\n    width: 400px;\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" (mapClick)=\"onChoseLocation($event)\"> \n  <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n</agm-map>\n\n"
+module.exports = "\n<div class=\"container\">\n  <div style=\"text-align:center\">\n    <div class=\"text-white\">\n      <agm-map [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\n        <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n      </agm-map>\n      <span>Latitute: {{currentLat}}</span>\n      <br>\n      <span>Longitude: {{currentLong}}</span>\n    </div>\n    <br>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"text-center\">\n          <h3>\n            <div #gmap style=\"width:100%;height:300px\"></div>\n          </h3>\n        </div>\n      </div>\n    </div>\n  </div>\n"
 
 /***/ }),
 
@@ -341,24 +345,49 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var LocationComponent = /** @class */ (function () {
     function LocationComponent(_httpService, _route, _router) {
         this._httpService = _httpService;
         this._route = _route;
         this._router = _router;
-        this.latitude = 47.60997;
-        this.longitude = -122.196;
-        this.locationChosen = false;
+        this.zoom = 12;
+        this.isTracking = false;
     }
     LocationComponent.prototype.ngOnInit = function () {
-        console.log("Location up");
+        this.findMe();
     };
-    LocationComponent.prototype.onChoseLocation = function (event) {
-        console.log(event);
-        this.latitude = event.coords.lat;
-        this.longitude = event.coords.lng;
-        this.locationChosen = true;
+    LocationComponent.prototype.findMe = function () {
+        var _this = this;
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                _this.showPosition(position);
+            });
+        }
+        else {
+            alert("Geolocation is not supported by this browser.");
+        }
     };
+    LocationComponent.prototype.showPosition = function (position) {
+        this.currentLat = position.coords.latitude;
+        this.currentLong = position.coords.longitude;
+        console.log(this.currentLat);
+        var location = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        if (!this.marker) {
+            this.marker = new google.maps.Marker({
+                position: location,
+                map: this.map,
+                title: 'Got you!'
+            });
+        }
+        else {
+            this.marker.setPosition(location);
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('gmap'),
+        __metadata("design:type", Object)
+    ], LocationComponent.prototype, "gmapElement", void 0);
     LocationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-location',

@@ -75,7 +75,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>How's this, Queen Nishi?...mighty overlord of OUR project</h1>\n<router-outlet></router-outlet>\n\n\n"
+module.exports = "<h1>Got Hikes?</h1>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -301,7 +301,7 @@ var LandingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "agm-map{\r\n    height: 400px;\r\n    width: 400px;\r\n}"
+module.exports = "agm-map{\n    height: 400px;\n    width: 400px;\n}"
 
 /***/ }),
 

@@ -447,7 +447,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\" />\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <title>Sign in to PathWaze</title>\n  <meta name=\"google-signin-client_id\" content=\"50175574432-tpshh02i3gacjjuaf1u2sfugs4r83h51.apps.googleusercontent.com\">\n  <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"main.css\" />\n  <script src=\"https://apis.google.com/js/platform.js?onload=init\" async defer>\n  function init() {\n      gapi.load('auth2', function () { // Ready. });\n      });\n    }\n  </script>\n</head>\n<body style=\"text-align: center\">\n  <h2>\n    Sign in\n  </h2>\n  \n  <button (click)=\"socialSignIn('facebook')\">Sign in with Facebook</button>\n  <button (click)=\"socialSignIn('google')\">Signin in with Google</button>\n</body>\n</html>\n\n\n\n"
+module.exports = "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n  <meta charset=\"utf-8\" />\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <title>Sign in to PathWaze</title>\r\n  <meta name=\"google-signin-client_id\" content=\"50175574432-tpshh02i3gacjjuaf1u2sfugs4r83h51.apps.googleusercontent.com\">\r\n  <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"main.css\" />\r\n  <script src=\"https://apis.google.com/js/platform.js?onload=init\" async defer>\r\n  function init() {\r\n      gapi.load('auth2', function () { // Ready. });\r\n      });\r\n    }\r\n  </script>\r\n</head>\r\n<body style=\"text-align: center\">\r\n  <h2>\r\n    Sign in\r\n  </h2>\r\n  \r\n  <button (click)=\"socialSignIn('facebook')\">Sign in with Facebook</button>\r\n  <button (click)=\"socialSignIn('google')\">Signin in with Google</button>\r\n</body>\r\n</html>\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -571,7 +571,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Geran Pauley\Desktop\Dojo\MEAN\Project\PathWaze\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Chad\Desktop\PathWaze\PathWaze\src\main.ts */"./src/main.ts");
 
 
 /***/ })

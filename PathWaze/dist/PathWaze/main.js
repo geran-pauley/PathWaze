@@ -75,7 +75,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<h1>How's this, Queen Nishi?...mighty overlord of OUR project</h1>\n<router-outlet></router-outlet>\n\n\n"
 
 /***/ }),
 
@@ -239,7 +239,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  Hello fuckin' Angular\n</p>\n<button [routerLink]=\"['/locations']\">Go to Locations</button>\n"
+module.exports = "<p>\n  Hello fuckin' Angular \n</p>\n<form>\n<button class=\"btn large teal darken-2\" [routerLink]=\"['/locations']\">Go to Locations<button/>\n</form>\n\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, beatae at voluptatum est deleniti corrupti quia assumenda sit nemo cum deserunt, nostrum iure dolorum fugit.</p>"
 
 /***/ }),
 
@@ -301,7 +301,7 @@ var LandingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "agm-map{\n    height: 400px;\n    width: 400px;\n}"
 
 /***/ }),
 
@@ -312,7 +312,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html>\n\n<head>\n  <title>Simple Map</title>\n  <meta name=\"viewport\" content=\"initial-scale=1.0\">\n  <meta charset=\"utf-8\">\n  <style>\n    /* Always set the map height explicitly to define the size of the div\n                   * element that contains the map. */\n\n    #map {\n      height: 100%;\n    }\n\n    /* Optional: Makes the sample page fill the window. */\n\n    html,\n    body {\n      height: 100%;\n      margin: 0;\n      padding: 0;\n    }\n  </style>\n</head>\n\n<body>\n  <div id=\"gmap\"></div>\n  <script>\n    var map;\n    function initMap() {\n      map = new google.maps.Map(document.getElementById('map'), {\n        center: { lat: -34.397, lng: 150.644 },\n        zoom: 8\n      });\n    }\n  </script>\n  <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyA9nIuzBQg_mY6Xi8Ia_3_KtbwXftZInyQ&callback=initMap\" async\n    defer></script>\n</body>\n\n</html>"
+module.exports = "<agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" (mapClick)=\"onChoseLocation($event)\"> \n  <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n</agm-map>\n\n"
 
 /***/ }),
 
@@ -341,26 +341,24 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var LocationComponent = /** @class */ (function () {
     function LocationComponent(_httpService, _route, _router) {
         this._httpService = _httpService;
         this._route = _route;
         this._router = _router;
+        this.latitude = 47.60997;
+        this.longitude = -122.196;
+        this.locationChosen = false;
     }
     LocationComponent.prototype.ngOnInit = function () {
-        var mapProp = {
-            center: new google.maps.LatLng(18.5793, 73.8143),
-            zoom: 15,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
         console.log("Location up");
     };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('gmap'),
-        __metadata("design:type", Object)
-    ], LocationComponent.prototype, "gmapElement", void 0);
+    LocationComponent.prototype.onChoseLocation = function (event) {
+        console.log(event);
+        this.latitude = event.coords.lat;
+        this.longitude = event.coords.lng;
+        this.locationChosen = true;
+    };
     LocationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-location',

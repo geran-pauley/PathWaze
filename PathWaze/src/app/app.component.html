@@ -5,19 +5,23 @@ img {
   width: auto;
   margin-left: 30px;
 }
-
 </style>
+<header>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+</header>
 <div class="container blue-grey lighten-1">
 <nav class="nav-extended white">
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo"><img class="materialboxed" src="assets/static/images/pathwazeLogo.png"></a>
           <ul class="right hide-on-med-and-down">
             <li><a class="btn large blue lighten-2">Home</a></li>
-            <li><a [routerLink]="['/location']" class="btn large blue lighten-2">Location</a></li>
+            <li><a [routerLink]="['/location']" class="btn large blue lighten-2">Location <i class="material-icons">add</i></a></li>
             <li><a class="btn large blue lighten-2">Meetups</a></li>
             <li><a class="btn large blue lighten-2 disabled">FAQ</a></li>
+            
           </ul>
+
         </div>
         <div class="nav-content">
           <span class="nav-title"></span>
@@ -44,6 +48,7 @@ img {
         <ul>
          
         </ul>
+        
       </div>
     </div>
   </div>

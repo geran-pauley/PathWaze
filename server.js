@@ -35,7 +35,7 @@ app.get('/landings', function (req, res) {
     });
 });
 
-app.get('/location', function (req, res) {
+app.get('/locations', function (req, res) {
     Hikes.find({}, function (err, data) {
         if (err) {
             console.log("Returned error", err);
@@ -45,6 +45,27 @@ app.get('/location', function (req, res) {
         }
     });
 });
+
+app.get('/signins', function (req, res) {
+    Hikes.find({}, function (err, data) {
+        if (err) {
+            console.log("Returned error", err);
+            res.json({ message: "Error", error: err });
+        } else {
+            res.json(data);
+        }
+    });
+});
+
+// catch all for angular routes
+app.all("**", (req, res, next) => {
+    res.sendFile(path.resolve("./PathWaze/dist/PathWaze/index.html"))
+})
+// tell your server which port to run on
+app.listen(4200);
+// print to terminal window
+console.log("Running in localhost at port 4200");
+
 // // Edit one product
 // app.get('/product/:id/edit', function (req, res) {
 //     Product.find({}, function (err, data) {
@@ -118,11 +139,3 @@ app.get('/location', function (req, res) {
 //     });
 // })
 
-// catch all for angular routes
-app.all("**", (req, res, next) => {
-    res.sendFile(path.resolve("./PathWaze/dist/PathWaze/index.html"))
-})
-// tell your server which port to run on
-app.listen(4200);
-// print to terminal window
-console.log("Running in localhost at port 4200");

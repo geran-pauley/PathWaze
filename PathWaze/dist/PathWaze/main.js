@@ -133,23 +133,20 @@ var AppComponent = /** @class */ (function () {
 /*!*******************************!*\
   !*** ./src/app/app.module.ts ***!
   \*******************************/
-/*! exports provided: getAuthServiceConfigs, AppModule */
+/*! exports provided: AppModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAuthServiceConfigs", function() { return getAuthServiceConfigs; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
-/* harmony import */ var _location_location_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./location/location.component */ "./src/app/location/location.component.ts");
-/* harmony import */ var angular5_social_login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! angular5-social-login */ "./node_modules/angular5-social-login/angular5-social-login.umd.js");
-/* harmony import */ var angular5_social_login__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(angular5_social_login__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _signin_signin_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./signin/signin.component */ "./src/app/signin/signin.component.ts");
+/* harmony import */ var _signin_signin_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./signin/signin.component */ "./src/app/signin/signin.component.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _agm_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @agm/core */ "./node_modules/@agm/core/index.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _landing_landing_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./landing/landing.component */ "./src/app/landing/landing.component.ts");
+/* harmony import */ var _location_location_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./location/location.component */ "./src/app/location/location.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -164,44 +161,26 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-function getAuthServiceConfigs() {
-    var config = new angular5_social_login__WEBPACK_IMPORTED_MODULE_7__["AuthServiceConfig"]([
-        {
-            id: angular5_social_login__WEBPACK_IMPORTED_MODULE_7__["FacebookLoginProvider"].PROVIDER_ID,
-            provider: new angular5_social_login__WEBPACK_IMPORTED_MODULE_7__["FacebookLoginProvider"]("Your-Facebook-app-id")
-        },
-        {
-            id: angular5_social_login__WEBPACK_IMPORTED_MODULE_7__["GoogleLoginProvider"].PROVIDER_ID,
-            provider: new angular5_social_login__WEBPACK_IMPORTED_MODULE_7__["GoogleLoginProvider"]("Your-Google-Client-Id")
-        },
-    ]);
-    return config;
-}
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _landing_landing_component__WEBPACK_IMPORTED_MODULE_5__["LandingComponent"],
-                _location_location_component__WEBPACK_IMPORTED_MODULE_6__["LocationComponent"],
-                _signin_signin_component__WEBPACK_IMPORTED_MODULE_8__["SigninComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _landing_landing_component__WEBPACK_IMPORTED_MODULE_6__["LandingComponent"],
+                _location_location_component__WEBPACK_IMPORTED_MODULE_7__["LocationComponent"],
+                _signin_signin_component__WEBPACK_IMPORTED_MODULE_0__["SigninComponent"],
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _agm_core__WEBPACK_IMPORTED_MODULE_2__["AgmCoreModule"].forRoot({
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _agm_core__WEBPACK_IMPORTED_MODULE_3__["AgmCoreModule"].forRoot({
                     apiKey: 'AIzaSyA9nIuzBQg_mY6Xi8Ia_3_KtbwXftZInyQ'
                 }),
-                angular5_social_login__WEBPACK_IMPORTED_MODULE_7__["SocialLoginModule"]
             ],
-            providers: [{
-                    provide: angular5_social_login__WEBPACK_IMPORTED_MODULE_7__["AuthServiceConfig"],
-                    useFactory: getAuthServiceConfigs
-                }],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            providers: [],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -339,7 +318,7 @@ module.exports = "agm-map{\n    height: 400px;\n    width: auto;\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<style>\n\n  img {\n    height: auto;\n    width: 90px;\n  }\n</style>\n\n<div class=\"row\">\n    <div class=\"col s12 m6\">\n      <div class=\"card blue-grey darken-1\">\n        <div class=\"card-content white-text\">\n    <agm-map class=\"center-align\" [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\n      <agm-marker class=\"center-align\" [latitude]=\"latitude\" [longitude]=\"longitude\" *ngIf=\"locationChosen\"></agm-marker>\n    </agm-map>\n          <blockquote><span>Latitute: {{currentLat}}</span></blockquote>\n          <blockquote><span>Longitude: {{currentLong}}</span></blockquote>\n\n          \n        </div>\n      <!-- <div class=\"card-action\">\n        <a href=\"#\">Find MeetUps</a>\n        <a href=\"#\">Find Lodging</a>\n        \n      </div> -->\n      \n    </div>\n\n    \n  </div>\n  <div class=\"row align-center\">\n    <div class=\"col s12 m6\">\n      <div class=\"card\">\n        <div class=\"card-image\">\n           <img class=\"materialboxed\" src=\"assets/static/images/hikepath.jpg\">\n          <span class=\"card-title\">Hikey Ridge</span>\n         \n          <a class=\"btn-floating halfway-fab waves-effect waves-light red\"><i class=\"material-icons\">add</i></a>\n        </div>\n        <div class=\"card-content\">\n          <p>Get lost in nature and find yourself again on Hikey Ridge. Flexing on them haters with three pristine views and cool nature stuff,\n            Hikey Ridge is perfect for beginers, posers, and hikers who hiked before hiking was cool. \n          </p>\n        </div>\n      </div>\n\n      <div id=\"socialMedia\" class=\"col s4\"><a href=\"https://facebook.com\" target=\"_blank\"><img class=\"materialboxed\" src=\"assets/static/images/facebook.png\"></a></div>\n      <div id=\"socialMedia\" class=\"col s4\"><a href=\"https://instagram.com\" target=\"_blank\"><img class=\"materialboxed\" src=\"assets/static/images/instagram.png\"></a></div>\n      <div id=\"socialMedia\" class=\"col s4\"><a href=\"https://twitter.com\" target=\"_blank\"><img class=\"materialboxed\" src=\"assets/static/images/twitter.png\"></a></div>\n    </div>\n  </div>\n            \n</div>\n\n"
+module.exports = "\n<style>\n\n  img {\n    height: auto;\n    width: 90px;\n  }\n</style>\n\n<div class=\"row\">\n    <div class=\"col s12 m6\">\n      <div class=\"card blue-grey darken-1\">\n        <div class=\"card-content white-text\">\n    <agm-map class=\"center-align\" [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\" [zoom]=\"zoom\" (mapClick)=\"onChoseLocation($event)\">\n      <agm-marker [latitude]=\"this.currentLat\" [longitude]=\"this.currentLong\"></agm-marker>\n    </agm-map>\n          <blockquote><span>Latitute: {{currentLat}}</span></blockquote>\n          <blockquote><span>Longitude: {{currentLong}}</span></blockquote>\n\n          \n        </div>\n      <!-- <div class=\"card-action\">\n        <a href=\"#\">Find MeetUps</a>\n        <a href=\"#\">Find Lodging</a>\n        \n      </div> -->\n      \n    </div>\n\n    \n  </div>\n  <div class=\"row align-center\">\n    <div class=\"col s12 m6\">\n      <div class=\"card\">\n        <div class=\"card-image\">\n           <img class=\"materialboxed\" src=\"assets/static/images/hikepath.jpg\">\n          <span class=\"card-title\">Hikey Ridge</span>\n         \n          <a class=\"btn-floating halfway-fab waves-effect waves-light red\"><i class=\"material-icons\">add</i></a>\n        </div>\n        <div class=\"card-content\">\n          <p>Get lost in nature and find yourself again on Hikey Ridge. Flexing on them haters with three pristine views and cool nature stuff,\n            Hikey Ridge is perfect for beginers, posers, and hikers who hiked before hiking was cool. \n          </p>\n        </div>\n      </div>\n\n      <div id=\"socialMedia\" class=\"col s4\"><a href=\"https://facebook.com\" target=\"_blank\"><img class=\"materialboxed\" src=\"assets/static/images/facebook.png\"></a></div>\n      <div id=\"socialMedia\" class=\"col s4\"><a href=\"https://instagram.com\" target=\"_blank\"><img class=\"materialboxed\" src=\"assets/static/images/instagram.png\"></a></div>\n      <div id=\"socialMedia\" class=\"col s4\"><a href=\"https://twitter.com\" target=\"_blank\"><img class=\"materialboxed\" src=\"assets/static/images/twitter.png\"></a></div>\n    </div>\n  </div>\n            \n</div>\n\n"
 
 /***/ }),
 
@@ -368,15 +347,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var LocationComponent = /** @class */ (function () {
     function LocationComponent(_httpService, _route, _router) {
         this._httpService = _httpService;
         this._route = _route;
         this._router = _router;
         this.zoom = 12;
-        this.isTracking = false;
     }
+    LocationComponent.prototype.onChoseLocation = function (event) {
+        this.latitude = event.coords.lat;
+        this.longitude = event.coords.lng;
+    };
     LocationComponent.prototype.ngOnInit = function () {
         this.findMe();
     };
@@ -407,10 +388,6 @@ var LocationComponent = /** @class */ (function () {
             this.marker.setPosition(location);
         }
     };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('gmap'),
-        __metadata("design:type", Object)
-    ], LocationComponent.prototype, "gmapElement", void 0);
     LocationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-location',
@@ -447,7 +424,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\" />\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <title>Sign in to PathWaze</title>\n  <meta name=\"google-signin-client_id\" content=\"50175574432-tpshh02i3gacjjuaf1u2sfugs4r83h51.apps.googleusercontent.com\">\n  <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"main.css\" />\n  <script src=\"https://apis.google.com/js/platform.js?onload=init\" async defer>\n  function init() {\n      gapi.load('auth2', function () { // Ready. });\n      });\n    }\n  </script>\n</head>\n<body style=\"text-align: center\">\n  <h2>\n    Sign in\n  </h2>\n  \n  <button (click)=\"socialSignIn('facebook')\">Sign in with Facebook</button>\n  <button (click)=\"socialSignIn('google')\">Signin in with Google</button>\n</body>\n</html>\n\n\n\n"
+module.exports = "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\" />\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <title>Sign in to PathWaze</title>\n  <meta name=\"google-signin-client_id\" content=\"50175574432-tpshh02i3gacjjuaf1u2sfugs4r83h51.apps.googleusercontent.com\">\n  <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"main.css\" />\n  <script src=\"https://apis.google.com/js/platform.js?onload=init\" async defer></script>\n  <script src=\"./dist/hello.all.js\">\n  hello.on('auth.login', function (auth) {\n\n      // Call user information, for the given network\n      hello(auth.network).api('me').then(function (r) {\n        // Inject it into the container\n        var label = document.getElementById('profile_' + auth.network);\n        if (!label) {\n          label = document.createElement('div');\n          label.id = 'profile_' + auth.network;\n          document.getElementById('profile').appendChild(label);\n        }\n        label.innerHTML = '<img src=\"' + r.thumbnail + '\" /> Hey ' + r.name;\n      });\n    });</script>\n</head>\n<body style=\"text-align: center\">\n  <h2>\n    Sign in\n  </h2>\n<button onclick=\"hello('google').login()\">Sign in with Google</button>\n</body>\n</html>\n\n\n\n"
 
 /***/ }),
 
@@ -462,8 +439,6 @@ module.exports = "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\" />\
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SigninComponent", function() { return SigninComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var angular5_social_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angular5-social-login */ "./node_modules/angular5-social-login/angular5-social-login.umd.js");
-/* harmony import */ var angular5_social_login__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(angular5_social_login__WEBPACK_IMPORTED_MODULE_1__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -474,26 +449,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var SigninComponent = /** @class */ (function () {
-    function SigninComponent(socialAuthService) {
-        this.socialAuthService = socialAuthService;
+    function SigninComponent() {
     }
     SigninComponent.prototype.ngOnInit = function () {
         console.log("Sign In Page Loaded");
-    };
-    SigninComponent.prototype.socialSignIn = function (socialPlatform) {
-        var socialPlatformProvider;
-        if (socialPlatform == "facebook") {
-            socialPlatformProvider = angular5_social_login__WEBPACK_IMPORTED_MODULE_1__["FacebookLoginProvider"].PROVIDER_ID;
-        }
-        else if (socialPlatform == "google") {
-            socialPlatformProvider = angular5_social_login__WEBPACK_IMPORTED_MODULE_1__["GoogleLoginProvider"].PROVIDER_ID;
-        }
-        this.socialAuthService.signIn(socialPlatformProvider).then(function (userData) {
-            console.log(socialPlatform + " sign in data : ", userData);
-            // Now sign-in with userData
-        });
     };
     SigninComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -501,7 +461,7 @@ var SigninComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./signin.component.html */ "./src/app/signin/signin.component.html"),
             styles: [__webpack_require__(/*! ./signin.component.css */ "./src/app/signin/signin.component.css")]
         }),
-        __metadata("design:paramtypes", [angular5_social_login__WEBPACK_IMPORTED_MODULE_1__["AuthService"]])
+        __metadata("design:paramtypes", [])
     ], SigninComponent);
     return SigninComponent;
 }());

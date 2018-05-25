@@ -12,7 +12,7 @@
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
     <agm-map class="center-align" [latitude]="this.currentLat" [longitude]="this.currentLong" [zoom]="zoom" (mapClick)="onChoseLocation($event)">
-      <agm-marker class="center-align" [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen"></agm-marker>
+      <agm-marker [latitude]="this.currentLat" [longitude]="this.currentLong"></agm-marker>
     </agm-map>
           <blockquote><span>Latitute: {{currentLat}}</span></blockquote>
           <blockquote><span>Longitude: {{currentLong}}</span></blockquote>

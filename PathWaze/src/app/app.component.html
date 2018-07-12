@@ -15,10 +15,10 @@ img {
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo"><img class="materialboxed" src="assets/static/images/pathwazeLogo.png"></a>
           <ul class="right hide-on-med-and-down">
-            <li><a class="btn large blue lighten-2">Home</a></li>
+            <li><a class="waves-effect waves-light btn large blue lighten-2">Home</a></li>
             <li><a [routerLink]="['/location']" class="btn large blue lighten-2">Location <i class="material-icons">add</i></a></li>
-            <li><a class="btn large blue lighten-2">Meetups</a></li>
-            <li><a class="btn large blue lighten-2 disabled">FAQ</a></li>
+            <li><a class="waves-effect waves-light btn large blue lighten-2">Meetups</a></li>
+            <li><a class="waves-effect waves-light btn large blue lighten-2 disabled">FAQ</a></li>
             
           </ul>
 
@@ -30,6 +30,7 @@ img {
           </a>
         </div>
       </nav>
+
       
             
 <router-outlet></router-outlet>
@@ -52,9 +53,9 @@ img {
       </div>
     </div>
   </div>
-  <div class="footer-copyright">
+  <div class="footer-copyright" style="text-align: center">
     <div class="container">
-    © 1999 Copyright Text
+    <span id="copyright">© 2018 PathWaze.com, Inc. All Rights Reserved</span>
     <a class="grey-text blue-grey lighten-1 right" href="#!"></a>
     </div>
   </div>

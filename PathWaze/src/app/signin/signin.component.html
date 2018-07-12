@@ -19,13 +19,15 @@
         <p>Sign in with</p>
       </div>
       <div>
-        <button class="btn large green" (click)="signInWithGoogle()">Google</button>
-        <button class="btn large blue" (click)="signInWithFB()">Facebook </button>
+        <button id="gl" class="btn large" (click)="signInWithGoogle()"><img id="googleIcon" src="/assets/static/images/googleIcon.png">Google</button>
+        <br>
+        <br>
+        <button id="fb" class="btn large" (click)="signInWithFB()"><img id="fbIcon" src="/assets/static/images/fbIcon.png">Facebook</button>
       </div>
     </div>
     <div *ngIf="user">
       <div></div>
-      <img src="{{ user.photoUrl }}">
+      <img id="socialPic" src="{{ user.photoUrl }}">
       <div>
         <h4>{{ user.name }}</h4>
         <p>{{ user.email }}</p>

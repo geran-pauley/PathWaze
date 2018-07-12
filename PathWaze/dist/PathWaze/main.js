@@ -79,7 +79,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<style>\r\nimg {\r\n  height: 100px;\r\n  width: auto;\r\n  margin-left: 30px;\r\n}\r\n</style>\r\n<header>\r\n  <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\r\n\r\n</header>\r\n<div class=\"container blue-grey lighten-1\">\r\n<nav class=\"nav-extended white\">\r\n        <div class=\"nav-wrapper\">\r\n          <a href=\"#!\" class=\"brand-logo\"><img class=\"materialboxed\" src=\"assets/static/images/pathwazeLogo.png\"></a>\r\n          <ul class=\"right hide-on-med-and-down\">\r\n            <li><a class=\"btn large blue lighten-2\">Home</a></li>\r\n            <li><a [routerLink]=\"['/location']\" class=\"btn large blue lighten-2\">Location <i class=\"material-icons\">add</i></a></li>\r\n            <li><a class=\"btn large blue lighten-2\">Meetups</a></li>\r\n            <li><a class=\"btn large blue lighten-2 disabled\">FAQ</a></li>\r\n            \r\n          </ul>\r\n\r\n        </div>\r\n        <div class=\"nav-content\">\r\n          <span class=\"nav-title\"></span>\r\n          <a class=\"btn-floating btn-large halfway-fab waves-effect waves-light teal\">\r\n            <i class=\"medium material-icons\">camera_alt</i>\r\n          </a>\r\n        </div>\r\n      </nav>\r\n      \r\n            \r\n<router-outlet></router-outlet>\r\n\r\n\r\n\r\n<footer class=\"page-footer blue-grey lighten-1\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col l6 s12\">\r\n        <h5 class=\"white-text\"></h5>\r\n        <p class=\"grey-text blue-grey lighten-1\"></p>\r\n      </div>\r\n      <div class=\"col l4 offset-l2 s12\">\r\n        <h5 class=\"white-text\"></h5>\r\n        <ul>\r\n         \r\n        </ul>\r\n        \r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"footer-copyright\">\r\n    <div class=\"container\">\r\n    © 1999 Copyright Text\r\n    <a class=\"grey-text blue-grey lighten-1 right\" href=\"#!\"></a>\r\n    </div>\r\n  </div>\r\n</footer>\r\n</div>"
+module.exports = "\r\n<style>\r\nimg {\r\n  height: 100px;\r\n  width: auto;\r\n  margin-left: 30px;\r\n}\r\n</style>\r\n<header>\r\n  <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\r\n\r\n</header>\r\n<div class=\"container blue-grey lighten-1\">\r\n<nav class=\"nav-extended white\">\r\n        <div class=\"nav-wrapper\">\r\n          <a href=\"#!\" class=\"brand-logo\"><img class=\"materialboxed\" src=\"assets/static/images/pathwazeLogo.png\"></a>\r\n          <ul class=\"right hide-on-med-and-down\">\r\n            <li><a class=\"waves-effect waves-light btn large blue lighten-2\">Home</a></li>\r\n            <li><a [routerLink]=\"['/location']\" class=\"btn large blue lighten-2\">Location <i class=\"material-icons\">add</i></a></li>\r\n            <li><a class=\"waves-effect waves-light btn large blue lighten-2\">Meetups</a></li>\r\n            <li><a class=\"waves-effect waves-light btn large blue lighten-2 disabled\">FAQ</a></li>\r\n            \r\n          </ul>\r\n\r\n        </div>\r\n        <div class=\"nav-content\">\r\n          <span class=\"nav-title\"></span>\r\n          <a class=\"btn-floating btn-large halfway-fab waves-effect waves-light teal\">\r\n            <i class=\"medium material-icons\">camera_alt</i>\r\n          </a>\r\n        </div>\r\n      </nav>\r\n\r\n      \r\n            \r\n<router-outlet></router-outlet>\r\n\r\n\r\n\r\n<footer class=\"page-footer blue-grey lighten-1\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col l6 s12\">\r\n        <h5 class=\"white-text\"></h5>\r\n        <p class=\"grey-text blue-grey lighten-1\"></p>\r\n      </div>\r\n      <div class=\"col l4 offset-l2 s12\">\r\n        <h5 class=\"white-text\"></h5>\r\n        <ul>\r\n         \r\n        </ul>\r\n        \r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"footer-copyright\" style=\"text-align: center\">\r\n    <div class=\"container\">\r\n    <span id=\"copyright\">© 2018 PathWaze.com, Inc. All Rights Reserved</span>\r\n    <a class=\"grey-text blue-grey lighten-1 right\" href=\"#!\"></a>\r\n    </div>\r\n  </div>\r\n</footer>\r\n</div>"
 
 /***/ }),
 
@@ -90,7 +90,7 @@ module.exports = "\r\n<style>\r\nimg {\r\n  height: 100px;\r\n  width: auto;\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#copyright {\n  font-weight: bold; }\n"
 
 /***/ }),
 
@@ -342,7 +342,7 @@ var LandingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "agm-map{\r\n    height: 400px;\r\n    width: auto;\r\n}"
+module.exports = "agm-map{\r\n    height: 400px;\r\n    width: auto;\r\n}\r\n\r\n#hikey{\r\n    background: linear-gradient(to right, rgba(255,0,0,0), rgb(201, 201, 201, 1))\r\n}"
 
 /***/ }),
 
@@ -450,7 +450,7 @@ var LocationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#fb {\r\n    background-color: #3b50a2 !important;\r\n    vertical-align: center;\r\n    position: relative;\r\n}\r\n\r\n#fbIcon{\r\n    position: relative;\r\n    top: 4px;\r\n    right: 7px;\r\n}\r\n\r\n#socialPic{\r\n    position: relative;\r\n    top: 10px;\r\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\r\n}\r\n\r\n#gl{\r\n    background-color: #3c7afc !important;\r\n    vertical-align: center;\r\n    position: relative;\r\n    width: 127px;\r\n}\r\n\r\n#googleIcon{\r\n    position: relative;\r\n    top: 5px;\r\n    right: 7px;\r\n}"
 
 /***/ }),
 
@@ -461,7 +461,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html>\n\n<head>\n  <meta charset=\"utf-8\" />\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <title>Sign into PathWaze</title>\n  <meta name=\"google-signin-client_id\" content=\"50175574432-tpshh02i3gacjjuaf1u2sfugs4r83h51.apps.googleusercontent.com\">\n  <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"main.css\" />\n  <script src=\"https://apis.google.com/js/platform.js?onload=init\" async defer></script>\n\n</head>\n\n<body style=\"text-align: center\">\n  <div>\n    <div class=\"signin\" *ngIf=\"!user\">\n      <div>\n        <h4>Not signed in</h4>\n        <p>Sign in with</p>\n      </div>\n      <div>\n        <button class=\"btn large green\" (click)=\"signInWithGoogle()\">Google</button>\n        <button class=\"btn large blue\" (click)=\"signInWithFB()\">Facebook </button>\n      </div>\n    </div>\n    <div *ngIf=\"user\">\n      <div></div>\n      <img src=\"{{ user.photoUrl }}\">\n      <div>\n        <h4>{{ user.name }}</h4>\n        <p>{{ user.email }}</p>\n      </div>\n      <div>\n        <button class=\"btn large red\" (click)=\"signOut()\">Sign out</button>\n      </div>\n    </div>\n  </div>\n</body>\n\n</html>"
+module.exports = "<!DOCTYPE html>\n<html>\n\n<head>\n  <meta charset=\"utf-8\" />\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <title>Sign into PathWaze</title>\n  <meta name=\"google-signin-client_id\" content=\"50175574432-tpshh02i3gacjjuaf1u2sfugs4r83h51.apps.googleusercontent.com\">\n  <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"main.css\" />\n  <script src=\"https://apis.google.com/js/platform.js?onload=init\" async defer></script>\n\n</head>\n\n<body style=\"text-align: center\">\n  <div>\n    <div class=\"signin\" *ngIf=\"!user\">\n      <div>\n        <h4>Not signed in</h4>\n        <p>Sign in with</p>\n      </div>\n      <div>\n        <button id=\"gl\" class=\"btn large\" (click)=\"signInWithGoogle()\"><img id=\"googleIcon\" src=\"/assets/static/images/googleIcon.png\">Google</button>\n        <br>\n        <br>\n        <button id=\"fb\" class=\"btn large\" (click)=\"signInWithFB()\"><img id=\"fbIcon\" src=\"/assets/static/images/fbIcon.png\">Facebook</button>\n      </div>\n    </div>\n    <div *ngIf=\"user\">\n      <div></div>\n      <img id=\"socialPic\" src=\"{{ user.photoUrl }}\">\n      <div>\n        <h4>{{ user.name }}</h4>\n        <p>{{ user.email }}</p>\n      </div>\n      <div>\n        <button class=\"btn large red\" (click)=\"signOut()\">Sign out</button>\n      </div>\n    </div>\n  </div>\n</body>\n\n</html>"
 
 /***/ }),
 

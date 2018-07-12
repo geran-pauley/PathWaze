@@ -1,18 +1,62 @@
-<nav class="nav-extended light-blue darken-4">
+
+<style>
+img {
+  height: 100px;
+  width: auto;
+  margin-left: 30px;
+}
+</style>
+<header>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</header>
+<div class="container blue-grey lighten-1">
+<nav class="nav-extended white">
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">PathWaze</a>
+          <a href="#!" class="brand-logo"><img class="materialboxed" src="assets/static/images/pathwazeLogo.png"></a>
           <ul class="right hide-on-med-and-down">
-            <li><a>A link</a></li>
-            <li><a>A second link</a></li>
-            <li><a>A third link</a></li>
+            <li><a class="btn large blue lighten-2">Home</a></li>
+            <li><a [routerLink]="['/location']" class="btn large blue lighten-2">Location <i class="material-icons">add</i></a></li>
+            <li><a class="btn large blue lighten-2">Meetups</a></li>
+            <li><a class="btn large blue lighten-2 disabled">FAQ</a></li>
+            
           </ul>
+
         </div>
         <div class="nav-content">
           <span class="nav-title"></span>
           <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
-            <i class="material-icons">+</i>
+            <i class="medium material-icons">camera_alt</i>
           </a>
         </div>
       </nav>
+      
             
 <router-outlet></router-outlet>
+
+
+
+<footer class="page-footer blue-grey lighten-1">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text"></h5>
+        <p class="grey-text blue-grey lighten-1"></p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text"></h5>
+        <ul>
+         
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 1999 Copyright Text
+    <a class="grey-text blue-grey lighten-1 right" href="#!"></a>
+    </div>
+  </div>
+</footer>
+</div>

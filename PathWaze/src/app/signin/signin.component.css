@@ -1,0 +1,30 @@
+#fb {
+    background-color: #3b50a2 !important;
+    vertical-align: center;
+    position: relative;
+}
+
+#fbIcon{
+    position: relative;
+    top: 4px;
+    right: 7px;
+}
+
+#socialPic{
+    position: relative;
+    top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#gl{
+    background-color: #3c7afc !important;
+    vertical-align: center;
+    position: relative;
+    width: 127px;
+}
+
+#googleIcon{
+    position: relative;
+    top: 5px;
+    right: 7px;
+}
